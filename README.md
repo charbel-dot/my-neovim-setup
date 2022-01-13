@@ -1,4 +1,5 @@
 <!-- Add a .config folder in $HOME, and if that did not work try this -->
 
-## Create a nevim folder in C:/users/username/appdata/local/nvim and aad 1 file name `init.vim`
+# Create a neovim folder in C:/users/YOUR_USER_NAME/appdata/local/nvim and add 1 file:
+`init.vim`
 
