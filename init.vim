@@ -38,7 +38,9 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'EdenEast/nightfox.nvim' "nightfox theme
 Plug 'tomasiser/vim-code-dark' "Vscode dark theme
-Plug 'itchyny/lightline.vim' "lighline statusline
+"Plug 'itchyny/lightline.vim' "lighline statusline
+Plug 'nvim-lualine/lualine.nvim' "Lualine statusline
+Plug 'kyazdani42/nvim-web-devicons' "icons in your statusline
 Plug 'https://github.com/flrnd/plastic.vim.git'
 Plug 'sheerun/vim-polyglot' "improved syntax highlighting 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
@@ -56,14 +58,22 @@ Plug 'ryanoasis/vim-devicons' "icons
 
 call plug#end()
 
+"Statuline Lua.vim
+
+lua << END
+require('lualine').setup {
+	options = { theme = 'onedark' }
+}
+END
+
 " --- GUI configs ---- "
 
 colorscheme onehalfdark
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
-let g:lightline = {
-	\ 'colorscheme': 'onehalfdark',
-	\ }
+"let g:lightline = {
+"	\ 'colorscheme': 'onedark'
+"	\ }
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 let g:NERDTreeDirArrowExpandable="+"
