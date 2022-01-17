@@ -22,7 +22,7 @@ set hidden
 set nobackup
 set nowritebackup
 set cmdheight=1
-set updatetime=100
+set updatetime=50
 syntax on
 
 " --- Plugins --- "
@@ -54,6 +54,7 @@ Plug 'nvim-telescope/telescope.nvim' "Telescope plugin
 Plug 'wojciechkepka/vim-github-dark' "github dark theme
 Plug 'andweeb/presence.nvim' "Rich presence for discord
 Plug 'sbdchd/neoformat' " Prettier
+Plug 'jiangmiao/auto-pairs' "Auto pair brackets and cols and paran
 Plug 'ryanoasis/vim-devicons' "icons
 
 call plug#end()
