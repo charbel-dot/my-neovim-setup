@@ -83,4 +83,5 @@ let g:NERDTreeDirArrowCollapsible="-"
 
 " --- Shortcuts --- "
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-A-w> :MarkdownPreview<CR>
 
