@@ -56,12 +56,19 @@ Plug 'andweeb/presence.nvim' " Rich presence for discord
 Plug 'sbdchd/neoformat' " Prettier
 Plug 'jiangmiao/auto-pairs' " Auto pair brackets and cols and paran
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown Preview
-Plug 'https://github.com/honza/vim-snippets.git' " Code Snippets
+Plug 'SirVer/ultisnips' " UltiSnippets
+Plug 'honza/vim-snippets' " Code snippets
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
 
-"Statuline Lua.vim
+" Snippets configs for UltiSnippets
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"Statuline configs for Lua.vim
 
 lua << END
 require('lualine').setup {
