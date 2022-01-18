@@ -36,26 +36,27 @@ Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-Plug 'EdenEast/nightfox.nvim' "nightfox theme
-Plug 'tomasiser/vim-code-dark' "Vscode dark theme
-"Plug 'itchyny/lightline.vim' "lighline statusline
-Plug 'nvim-lualine/lualine.nvim' "Lualine statusline
-Plug 'kyazdani42/nvim-web-devicons' "icons in your statusline
-Plug 'https://github.com/flrnd/plastic.vim.git'
-Plug 'sheerun/vim-polyglot' "improved syntax highlighting 
+Plug 'EdenEast/nightfox.nvim' " Nightfox theme
+Plug 'tomasiser/vim-code-dark' " Vscode dark theme
+"Plug 'itchyny/lightline.vim' " Lighline statusline
+Plug 'nvim-lualine/lualine.nvim' " Lualine statusline
+Plug 'kyazdani42/nvim-web-devicons' " Icons in your statusline
+Plug 'https://github.com/flrnd/plastic.vim.git' " Plastic.vim theme
+Plug 'sheerun/vim-polyglot' " Improved syntax highlighting 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-Plug 'luochen1990/rainbow' "Brackets pair colorizer
-Plug 'mhinz/vim-startify' "welcome screen
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
-Plug 'junegunn/goyo.vim' "distraction free mode
-Plug 'nvim-lua/plenary.nvim' "Telescope plugin
+Plug 'luochen1990/rainbow' " Brackets pair colorizer
+Plug 'mhinz/vim-startify' " Welcome screen
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
+Plug 'junegunn/goyo.vim' " Distraction free mode
+Plug 'nvim-lua/plenary.nvim' " Telescope plugin
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Telescope plugin
 Plug 'nvim-telescope/telescope.nvim' "Telescope plugin
-Plug 'wojciechkepka/vim-github-dark' "github dark theme
-Plug 'andweeb/presence.nvim' "Rich presence for discord
+Plug 'wojciechkepka/vim-github-dark' " Github dark theme
+Plug 'andweeb/presence.nvim' " Rich presence for discord
 Plug 'sbdchd/neoformat' " Prettier
-Plug 'jiangmiao/auto-pairs' "Auto pair brackets and cols and paran
-Plug 'ryanoasis/vim-devicons' "icons
+Plug 'jiangmiao/auto-pairs' " Auto pair brackets and cols and paran
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown Preview
+Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
 
