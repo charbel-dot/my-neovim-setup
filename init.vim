@@ -56,6 +56,7 @@ Plug 'andweeb/presence.nvim' " Rich presence for discord
 Plug 'sbdchd/neoformat' " Prettier
 Plug 'jiangmiao/auto-pairs' " Auto pair brackets and cols and paran
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown Preview
+Plug 'https://github.com/honza/vim-snippets.git' " Code Snippets
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
