@@ -16,6 +16,7 @@ set noshowmode
 set cursorline
 set laststatus=2
 set termguicolors
+
 " --- Autocomplete[coc.vim] configs --- "
 
 set hidden
@@ -91,6 +92,7 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
 " --- Shortcuts --- "
+
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 
