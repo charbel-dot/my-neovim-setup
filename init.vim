@@ -59,6 +59,7 @@ Plug 'jiangmiao/auto-pairs' " Auto pair brackets and cols and paran
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown Preview
 Plug 'SirVer/ultisnips' " UltiSnippets
 "Plug 'honza/vim-snippets' " Code snippets
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Tokyo theme
 Plug 'dracula/vim', { 'as': 'dracula' } " Dracula theme
 Plug 'ryanoasis/vim-devicons' " Icons
 
