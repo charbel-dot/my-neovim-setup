@@ -7,7 +7,7 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set softtabstop=4
-set spell
+set spell spelllang=en_us
 set mouse=a
 set noswapfile
 set encoding=UTF-8
