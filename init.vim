@@ -95,4 +95,5 @@ let g:NERDTreeDirArrowCollapsible="-"
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
+nnoremap <C-A-s> :Neoformat prettier<CR>
 
