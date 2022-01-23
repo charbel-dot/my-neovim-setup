@@ -61,6 +61,7 @@ Plug 'SirVer/ultisnips' " UltiSnippets
 "Plug 'honza/vim-snippets' " Code snippets
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Tokyo theme
 Plug 'dracula/vim', { 'as': 'dracula' } " Dracula theme
+Plug 'https://github.com/jbgutierrez/vim-better-comments.git' " Vim better comments
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
