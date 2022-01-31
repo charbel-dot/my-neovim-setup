@@ -35,7 +35,6 @@ Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'EdenEast/nightfox.nvim' " Nightfox theme
 Plug 'tomasiser/vim-code-dark' " Vscode dark theme
@@ -74,11 +73,23 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-"Statuline configs for Lua.vim
+" --- GUI configs ---- "
+
+colorscheme onedark
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_terminal_italics = 1
+"let g:lightline = {
+"	\ 'colorscheme': 'onedark'
+"	\ }
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="-"
+
+" -- Statuline configs for Lua.vim -- "
 
 lua << EOF
 require('lualine').setup {
-	options = { theme = 'onedark' }
+	options = { theme = 'onedark' },
 }
 
 --[[ vim.opt.termguicolors = true
@@ -87,19 +98,6 @@ require('bufferline').setup {
 }
 --]]
 EOF
-
-" --- GUI configs ---- "
-
-colorscheme onehalfdark
-let g:onedark_hide_endofbuffer = 1
-let g:onedark_terminal_italics = 1
-"let g:lightline = {
-"	\ 'colorscheme': 'onedark'
-"	\ }
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-"
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="-"
 
 " --- Shortcuts --- "
 
