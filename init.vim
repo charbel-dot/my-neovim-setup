@@ -1,4 +1,5 @@
 " --- Neovim configs --- "
+set termguicolors
 set number
 set relativenumber
 set autoindent
@@ -15,7 +16,6 @@ set background=dark
 set noshowmode
 set cursorline
 set laststatus=2
-set termguicolors
 
 " --- Autocomplete[coc.vim] configs --- "
 
@@ -41,6 +41,7 @@ Plug 'EdenEast/nightfox.nvim' " Nightfox theme
 Plug 'tomasiser/vim-code-dark' " Vscode dark theme
 "Plug 'itchyny/lightline.vim' " Lighline statusline
 Plug 'nvim-lualine/lualine.nvim' " Lualine statusline
+Plug 'akinsho/bufferline.nvim' " Bufferline for Lualine
 Plug 'kyazdani42/nvim-web-devicons' " Icons in your statusline
 Plug 'https://github.com/flrnd/plastic.vim.git' " Plastic.vim theme
 Plug 'sheerun/vim-polyglot' " Improved syntax highlighting 
@@ -62,6 +63,7 @@ Plug 'SirVer/ultisnips' " UltiSnippets
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Tokyo theme
 Plug 'dracula/vim', { 'as': 'dracula' } " Dracula theme
 Plug 'https://github.com/jbgutierrez/vim-better-comments.git' " Vim better comments
+Plug 'chriskempson/base16-vim' " Material darker
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
@@ -74,11 +76,17 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Statuline configs for Lua.vim
 
-lua << END
+lua << EOF
 require('lualine').setup {
 	options = { theme = 'onedark' }
 }
-END
+
+--[[ vim.opt.termguicolors = true
+require('bufferline').setup {
+	options = { theme = 'onedark' }
+}
+--]]
+EOF
 
 " --- GUI configs ---- "
 
@@ -89,7 +97,7 @@ let g:onedark_terminal_italics = 1
 "	\ 'colorscheme': 'onedark'
 "	\ }
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-
+"
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
@@ -98,4 +106,5 @@ let g:NERDTreeDirArrowCollapsible="-"
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
+nnoremap <C-A-l> :Telescope<CR>
 
