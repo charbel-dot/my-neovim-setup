@@ -1,4 +1,5 @@
 " --- Neovim configs --- "
+
 set termguicolors
 set number
 set relativenumber
@@ -89,12 +90,21 @@ let g:NERDTreeDirArrowCollapsible="-"
 
 lua << EOF
 require('lualine').setup {
-	options = { theme = 'onedark' },
-}
-
---[[ vim.opt.termguicolors = true
-require('bufferline').setup {
 	options = { theme = 'onedark' }
+}
+--[[
+vim.opt.termguicolors = true
+require('bufferline').setup {
+	highlights = {
+		fill = {
+			guifg = '#282c34',
+			guibg = '#282c34'
+		},
+        close_button = {
+            guifg = '#282c34',
+            guibg = '#282c34'
+        }
+	}
 }
 --]]
 EOF
@@ -105,4 +115,3 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
 nnoremap <C-A-l> :Telescope<CR>
-
