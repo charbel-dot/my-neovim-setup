@@ -32,7 +32,7 @@ syntax on
 call plug#begin('C:/users/nasseh/appdata/local/nvim/vim-plug')
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
+"Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
@@ -64,6 +64,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Tokyo theme
 Plug 'dracula/vim', { 'as': 'dracula' } " Dracula theme
 Plug 'https://github.com/jbgutierrez/vim-better-comments.git' " Vim better comments
 Plug 'chriskempson/base16-vim' " Material darker
+Plug 'kyazdani42/nvim-tree.lua' " Tree
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
@@ -92,6 +93,75 @@ lua << EOF
 require('lualine').setup {
 	options = { theme = 'onedark' }
 }
+
+require'nvim-tree'.setup {
+  disable_netrw       = true,
+  hijack_netrw        = true,
+  open_on_setup       = false,
+  ignore_ft_on_setup  = {},
+  auto_close          = false,
+  open_on_tab         = false,
+  hijack_cursor       = false,
+  update_cwd          = false,
+  update_to_buf_dir   = {
+    enable = true,
+    auto_open = true,
+  },
+  diagnostics = {
+    enable = false,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  },
+  update_focused_file = {
+    enable      = true,
+    update_cwd  = true,
+    ignore_list = {}
+  },
+  system_open = {
+    cmd  = nil,
+    args = {}
+  },
+  filters = {
+    dotfiles = false,
+    custom = {}
+  },
+  git = {
+    enable = true,
+    ignore = true,
+    timeout = 500,
+  },
+  view = {
+    width = 40,
+    height = 30,
+    hide_root_folder = false,
+    side = 'left',
+    auto_resize = false,
+    mappings = {
+      custom_only = false,
+      list = {}
+    },
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes"
+  },
+  trash = {
+    cmd = "trash",
+    require_confirm = true
+  },
+  actions = {
+    change_dir = {
+      global = false,
+    },
+    open_file = {
+      quit_on_open = false,
+    }
+  }
+}
+
 --[[
 vim.opt.termguicolors = true
 require('bufferline').setup {
@@ -111,7 +181,7 @@ EOF
 
 " --- Shortcuts --- "
 
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-t> :NvimTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
 nnoremap <C-A-l> :Telescope<CR>
