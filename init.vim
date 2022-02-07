@@ -184,4 +184,4 @@ EOF
 nnoremap <C-t> :NvimTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
-nnoremap <C-A-l> :Telescope<CR>
+nnoremap <C-A-l> :Telescope find_files<CR>
