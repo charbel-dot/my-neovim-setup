@@ -43,7 +43,6 @@ Plug 'luochen1990/rainbow' " Brackets pair colorizer
 Plug 'mhinz/vim-startify' " Welcome screen
 Plug 'junegunn/goyo.vim' " Distraction free mode
 Plug 'nvim-lua/plenary.nvim' " Telescope plugin
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Telescope plugin
 Plug 'nvim-telescope/telescope.nvim' "Telescope plugin
 Plug 'wojciechkepka/vim-github-dark' " Github dark theme
 Plug 'andweeb/presence.nvim' " Rich presence for discord
