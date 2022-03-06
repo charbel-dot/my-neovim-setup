@@ -60,7 +60,7 @@ call plug#end()
 
 " --- GUI configs ---- "
 
-colorscheme onehalfdark
+colorscheme onedark
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
