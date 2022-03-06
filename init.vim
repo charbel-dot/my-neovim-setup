@@ -52,6 +52,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markd
 Plug 'https://github.com/jbgutierrez/vim-better-comments.git' " Vim better comments
 Plug 'kyazdani42/nvim-tree.lua' " Tree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'ryanoasis/vim-devicons' " Icons
 
 call plug#end()
@@ -59,7 +60,7 @@ call plug#end()
 
 " --- GUI configs ---- "
 
-colorscheme onedark
+colorscheme onehalfdark
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -162,3 +163,4 @@ nnoremap <C-t> :NvimTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
 nnoremap <C-A-l> :Telescope find_files<CR>
+
