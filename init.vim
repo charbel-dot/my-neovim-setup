@@ -3,7 +3,7 @@
 set termguicolors
 set number
 set relativenumber
-set autoindent
+"set autoindent
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -15,7 +15,7 @@ set noswapfile
 set encoding=UTF-8
 set background=dark
 set noshowmode
-set cursorline
+"set cursorline
 set laststatus=2
 
 " --- Autocomplete[coc.vim] configs --- "
@@ -43,14 +43,14 @@ Plug 'luochen1990/rainbow' " Brackets pair colorizer
 Plug 'mhinz/vim-startify' " Welcome screen
 Plug 'junegunn/goyo.vim' " Distraction free mode
 Plug 'nvim-lua/plenary.nvim' " Telescope plugin
-Plug 'nvim-telescope/telescope.nvim' "Telescope plugin
 Plug 'wojciechkepka/vim-github-dark' " Github dark theme
 Plug 'andweeb/presence.nvim' " Rich presence for discord
 Plug 'sbdchd/neoformat' " Prettier
 Plug 'jiangmiao/auto-pairs' " Auto pair brackets and cols and paran
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown Preview
 Plug 'https://github.com/jbgutierrez/vim-better-comments.git' " Vim better comments
-Plug 'kyazdani42/nvim-tree.lua' " Tree
+"Plug 'kyazdani42/nvim-tree.lua' " Tree
+Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocomplete
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'ryanoasis/vim-devicons' " Icons
@@ -72,74 +72,6 @@ require('lualine').setup {
 	options = { theme = 'onedark' }
 }
 
-require('nvim-tree').setup {
-  disable_netrw       = true,
-  hijack_netrw        = true,
-  open_on_setup       = false,
-  ignore_ft_on_setup  = {},
-  auto_close          = false,
-  open_on_tab         = false,
-  hijack_cursor       = false,
-  update_cwd          = false,
-  update_to_buf_dir   = {
-    enable = true,
-    auto_open = true,
-  },
-  diagnostics = {
-    enable = false,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    }
-  },
-  update_focused_file = {
-    enable      = true,
-    update_cwd  = true,
-    ignore_list = {}
-  },
-  system_open = {
-    cmd  = nil,
-    args = {}
-  },
-  filters = {
-    dotfiles = false,
-    custom = {}
-  },
-  git = {
-    enable = true,
-    ignore = true,
-    timeout = 500,
-  },
-  view = {
-    width = 40,
-    height = 30,
-    hide_root_folder = false,
-    side = 'left',
-    auto_resize = false,
-    mappings = {
-      custom_only = false,
-      list = {}
-    },
-    number = false,
-    relativenumber = false,
-    signcolumn = "yes"
-  },
-  trash = {
-    cmd = "trash",
-    require_confirm = true
-  },
-  actions = {
-    change_dir = {
-      global = false,
-    },
-    open_file = {
-      quit_on_open = false,
-    }
-  }
-}
-
 --[[
 vim.opt.termguicolors = true
 require('bufferline').setup {
@@ -159,7 +91,7 @@ EOF
 
 " --- Shortcuts --- "
 
-nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-A-w> :MarkdownPreview<CR>
 nnoremap <C-A-s> :Neoformat prettier<CR>
 nnoremap <C-A-l> :Telescope find_files<CR>
